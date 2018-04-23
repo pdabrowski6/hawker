@@ -12,6 +12,15 @@ describe Hawker::Mapper do
       expect(Hawker::Mapper.map(url, response)).to eq(driver)
     end
 
+    it 'returns Medium driver instance if Medium page is detected' do
+      response = double('response')
+      url = "https://medium.com/nickname"
+      driver = instance_double(Hawker::Drivers::Medium)
+      allow(Hawker::Drivers::Medium).to receive(:new).with(response).and_return(driver)
+
+      expect(Hawker::Mapper.map(url, response)).to eq(driver)
+    end
+
     it 'returns Instagram driver instance if Instagram page is detected' do
       response = double('response')
       url = "https://instagram.com/nickname"
