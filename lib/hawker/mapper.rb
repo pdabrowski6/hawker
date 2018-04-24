@@ -6,7 +6,6 @@ module Hawker
       /(http|https):\/\/(www.|)github.com\/[a-zA-Z0-9_]*/ => Hawker::Drivers::Github,
       /(http|https):\/\/(www.|)instagram.com\/[a-zA-Z0-9_]*/ => Hawker::Drivers::Instagram,
       /(http|https):\/\/(www.|)twitter.com\/[a-zA-Z0-9_]*/ => Hawker::Drivers::Twitter,
-      /(http|https):\/\/(www.|)vimeo.com\/[a-zA-Z0-9_]*/ => Hawker::Drivers::Vimeo,
       "default" => Hawker::Drivers::Default
     }.freeze
 
