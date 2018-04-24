@@ -3,6 +3,7 @@ require 'hawker/drivers/default'
 require 'hawker/drivers/github'
 require 'hawker/drivers/instagram'
 require 'hawker/drivers/twitter'
+require 'hawker/drivers/vimeo'
 require 'hawker/mapper'
 
 module Hawker
@@ -23,6 +24,7 @@ module Hawker
       "GitHub",
       "Twitter",
       "Instagram",
+      "Vimeo",
       "Default"
     ]
   end
