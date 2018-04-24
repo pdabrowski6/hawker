@@ -6,7 +6,7 @@ module Hawker
     #
     # @return [String]
     def to_s
-      "0.0.0.2"
+      "0.0.0.1"
     end
   end
 end
