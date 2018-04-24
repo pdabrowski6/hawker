@@ -3,6 +3,15 @@ require 'hawker'
 
 describe Hawker::Mapper do
   describe '.map' do
+    it 'returns Vimeo driver instance if Vimeo page is detected' do
+      response = double('response')
+      url = "https://vimeo.com/nickname"
+      driver = instance_double(Hawker::Drivers::Vimeo)
+      allow(Hawker::Drivers::Vimeo).to receive(:new).with(response).and_return(driver)
+
+      expect(Hawker::Mapper.map(url, response)).to eq(driver)
+    end
+
     it 'returns GitHub driver instance if GitHub page is detected' do
       response = double('response')
       url = "https://github.com/nickname"
