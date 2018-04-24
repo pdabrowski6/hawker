@@ -4,7 +4,7 @@ require 'hawker'
 describe Hawker do
   describe '.drivers' do
     it 'returns available drivers list' do
-      expect(Hawker.drivers).to eq(['GitHub', 'Twitter', 'Instagram', 'Vimeo', 'Default'])
+      expect(Hawker.drivers).to eq(['GitHub', 'Twitter', 'Instagram', 'Default'])
     end
   end
 
